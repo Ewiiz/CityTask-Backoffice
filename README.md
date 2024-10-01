@@ -15,9 +15,3 @@ CityTask est une plateforme web qui facilite la gestion des tâches répétitive
 - AdonisJs (Backend)
 - Vue.js (Frontend)
 - SQLite (Base de données)
-
-## Installation
-
-1. Clonez le dépôt :
-   ```bash
-   git clone https://github.com/votre-utilisateur/citytask-backoffice.git
