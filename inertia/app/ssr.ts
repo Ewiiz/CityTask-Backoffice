@@ -9,10 +9,10 @@ export default function render(page: any) {
     render: renderToString,
     resolve: (name) => {
       const pages = import.meta.glob<DefineComponent>('../pages/**/*.vue', { eager: true })
-      const resolvedPaged = pages[`../pages/${name}.vue`]
+      const resolvedPage = pages[`../pages/${name}.vue`]
 
-      resolvedPaged.default.layout = Layout
-      return resolvedPaged
+      resolvedPage.default.layout = resolvedPage.default.layout || Layout
+      return resolvedPage
     },
 
     setup({ App, props, plugin }) {
