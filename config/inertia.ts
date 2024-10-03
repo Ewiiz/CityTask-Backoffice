@@ -11,6 +11,7 @@ const inertiaConfig = defineConfig({
    * Data that should be shared with all rendered pages
    */
   sharedData: {
+    url: (ctx) => ctx.request.url(),
     errors: (ctx) => ctx.session?.flashMessages.get('errors'),
   },
 

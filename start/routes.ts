@@ -8,5 +8,5 @@
 */
 
 import router from '@adonisjs/core/services/router'
-router.on('/').renderInertia('home')
-router.on('/test').renderInertia('test')
+router.on('/').redirect('home-page')
+router.on('/etat-civil').renderInertia('home').as('home-page')
