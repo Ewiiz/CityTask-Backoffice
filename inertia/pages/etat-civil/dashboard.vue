@@ -7,11 +7,11 @@ import { tabsCivilStatus } from '~/pages/components/data/navigation_tabs'
 </script>
 
 <template>
-  <Head title="Homepage" />
+  <Head title="Tableau de Bord" />
 
-  <div>
+  <div class="bg-zinc-200">
     <Button>Mon Bouton</Button>
-    <Link href="/etat-civil">Test</Link>
+    <Link href="/">Test</Link>
     <div>
       <Tabs :tabs="tabsCivilStatus" />
     </div>
