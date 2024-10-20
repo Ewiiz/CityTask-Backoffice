@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onMounted, ref } from 'vue'
+import { ref, onMounted } from 'vue'
 import { usePage, Link } from '@inertiajs/vue3'
 
 const props = defineProps<{
@@ -20,20 +20,24 @@ const setActiveTab = (tab: { name: string; link: string }) => {
 </script>
 
 <template>
-  <div>
-    <ul class="flex space-x-4 mt-5">
+  <div class="bg-slate-100">
+    <ul class="flex space-x-4 pt-5 mx-6">
       <li v-for="tab in tabs" :key="tab.name">
         <Link
           :href="tab.link"
           @click.prevent="setActiveTab(tab)"
           :class="[
-            activeTab === tab.link ? 'bg-white' : 'bg-slate-300',
-            'px-2 py-4 rounded-t-lg min-w-32 text-center',
+            activeTab === tab.link ? 'bg-white' : 'bg-zinc-200',
+            'px-2 py-1.5 rounded-t-lg min-w-32 text-center',
           ]"
         >
           {{ tab.name }}
         </Link>
       </li>
     </ul>
+
+    <div class="content mt-6">
+      <slot></slot>
+    </div>
   </div>
 </template>

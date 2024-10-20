@@ -1,22 +1,10 @@
 <script setup lang="ts">
 import { Head } from '@inertiajs/vue3'
-import { Link } from '@inertiajs/vue3'
-import { Button } from '~/components/ui/button'
-import Tabs from '~/pages/components/tabs.vue'
-
-const tabs = [
-  { name: 'Dashboard', link: '/etat-civil/dashboard' },
-  { name: 'Naissance', link: '/etat-civil/naissance' },
-  { name: 'Mariage', link: '/etat-civil/mariage' },
-  { name: 'Vie', link: '/etat-civil/vie' },
-  { name: 'Décès', link: '/etat-civil/deces' },
-]
+import { tabsCivilStatus } from '~/pages/components/data/navigation_tabs'
+import Layout from '~/pages/components/layout.vue'
 </script>
 
 <template>
   <Head title="Naissance" />
-
-  <div>
-    <Tabs :tabs="tabs" />
-  </div>
+  <Layout :tabs="tabsCivilStatus"> Naissance </Layout>
 </template>

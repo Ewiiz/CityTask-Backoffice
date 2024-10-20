@@ -2,8 +2,6 @@
 import { Head } from '@inertiajs/vue3'
 import { Link } from '@inertiajs/vue3'
 import { Button } from '~/components/ui/button'
-import Tabs from '~/pages/components/tabs.vue'
-import { tabsCivilStatus } from '~/pages/components/data/navigation_tabs'
 </script>
 
 <template>
@@ -12,8 +10,5 @@ import { tabsCivilStatus } from '~/pages/components/data/navigation_tabs'
   <div>
     <Button>Mon Bouton</Button>
     <Link href="/etat-civil">Test</Link>
-    <div>
-      <Tabs :tabs="tabsCivilStatus" />
-    </div>
   </div>
 </template>
