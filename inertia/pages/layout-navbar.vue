@@ -8,7 +8,7 @@ const props = defineProps<{
 
 let category = ref('')
 
-const getCategory = (url: string): string => {
+function getCategory(url: string): string {
   if (url.startsWith('/etat-civil')) {
     return 'Etat Civil'
   } else if (url.startsWith('/impots')) {
